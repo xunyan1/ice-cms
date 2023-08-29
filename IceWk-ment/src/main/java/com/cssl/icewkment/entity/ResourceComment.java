@@ -14,14 +14,29 @@ import java.util.Date;
 
 @Data
 @EqualsAndHashCode(callSuper = false)
-public class ArticleComment implements Serializable {
-    @TableId(type = IdType.AUTO)
-    private Integer id;
-    private Integer userId;
-    private String content;
-    private String username;
-    private String email;
+public class ResourceComment implements Serializable {
 
+    private static final long serialVersionUID = 1L;
+
+    /**
+     * id
+     */
+    @TableId(value = "id", type = IdType.AUTO)
+    private Integer id;
+
+    /**
+     * 内容
+     */
+    private String content;
+
+    /**
+     * 用户名
+     */
+    private String username;
+    /**
+     * 邮箱
+     */
+    private String email;
 
     /**
      * 添加时间
@@ -29,13 +44,34 @@ public class ArticleComment implements Serializable {
     @ApiModelProperty(value = "创建时间")
     @TableField(fill = FieldFill.INSERT)//创建注解::自动填充 -DEFAULT没有时，INSERT插入时
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
-    //@JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
-    //返回前端自动把Data类型转换为json类型
+    //      @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
+    // 返回前端自动把Data类型转换为json类型
     private Date addTime;
 
+    /**
+     * 父id
+     */
     private Integer parentId;
+
+    /**
+     * 外部id
+     */
     private Integer foreignId;
+
+    /**
+     * 头像
+     */
     private String profile;
-    private Integer articleId;
+
+    /**
+     * 文章id
+     */
+    private Integer resourceId;
+
+    /**
+     * 用户id
+     */
+    private Integer userId;
+
 
 }

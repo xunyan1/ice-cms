@@ -9,15 +9,17 @@ import java.io.Serializable;
 
 @Data
 @EqualsAndHashCode(callSuper = false)
-public class AllTag implements Serializable {
-    /**
-     * id
-     */
+public class SquareClass implements Serializable {
+
     @TableId(type = IdType.AUTO)
     private Integer id;
-
-    /**
-     * 所厲栏目id
-     */
-    private String tagName;
+    private String  name;
+    private Boolean isFree;
+    private Integer price;
+    private Integer father;
+    private String otherName;
+    private String describes;
+    private String imgclass;
+    private Integer top;
+    private Integer num;
 }

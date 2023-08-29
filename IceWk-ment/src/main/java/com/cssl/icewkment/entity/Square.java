@@ -1,5 +1,9 @@
 package com.cssl.icewkment.entity;
 
+import java.time.LocalDateTime;
+import java.io.Serializable;
+import java.util.Date;
+
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -9,12 +13,12 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-import java.io.Serializable;
-import java.util.Date;
-
 @Data
 @EqualsAndHashCode(callSuper = false)
-public class Article implements Serializable {
+public class Square implements Serializable {
+
+    private static final long serialVersionUID=1L;
+
     /**
      * id
      */
@@ -24,7 +28,7 @@ public class Article implements Serializable {
     /**
      * 所厲栏目id
      */
-    private String sortClass;
+    private Integer sortClass;
 
     /**
      * 文章标题
@@ -47,29 +51,20 @@ public class Article implements Serializable {
     private Integer titlefontType;
 
     /**
-     * 完整标题
-     */
-    private String fullTitle;
-
-    /**
-     * 副标题
-     */
-    private String subhead;
-
-    /**
-     * 简介
-     */
-    private String intro;
-
-    /**
      * 文章内容
      */
     private String content;
 
+    private Integer loveNum;
+
+    private String media;
+
+    private Integer type;
+
     /**
      * 作者
      */
-    private String author;
+    private Integer author;
 
     /**
      * 来源
@@ -102,11 +97,6 @@ public class Article implements Serializable {
     private Integer postNum;
 
     /**
-     * 喜欢数
-     */
-    private Integer loveNum;
-
-    /**
      * 是否顶制
      */
     private Integer ontop;
@@ -129,9 +119,9 @@ public class Article implements Serializable {
      */
     @ApiModelProperty(value = "创建时间")
     @TableField(fill = FieldFill.INSERT)//创建注解::自动填充 -DEFAULT没有时，INSERT插入时
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
-    // @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
-    // 返回前端自动把Data类型转换为json类型
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
+//      @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
+// 返回前端自动把Data类型转换为json类型
     private Date addTime;
 
     /**
@@ -139,22 +129,21 @@ public class Article implements Serializable {
      */
     @ApiModelProperty(value = "更新时间")
     @TableField(fill = FieldFill.INSERT_UPDATE)//更新注解::自动填充
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
-//返回前端自动把Data类型转换为json类型
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss",timezone="GMT+8")//返回前端自动把Data类型转换为json类型
     private Date updateTime;
 
     /**
      * 生成时间
      */
     @ApiModelProperty(value = "生成时间")
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
     private Date createTime;
 
     /**
      * 最后评论时间
      */
     @ApiModelProperty(value = "最后评论时间")
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
     private Date lastPost;
 
     /**
@@ -192,8 +181,4 @@ public class Article implements Serializable {
      */
     private String status;
 
-    /**
-     * 文章状态身份
-     */
-    private Integer articleStatus;
 }
