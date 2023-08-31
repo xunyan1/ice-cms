@@ -29,9 +29,6 @@ public class FontUtil {
 
     /**
      * 根据字体类型获取字体
-     * @param type
-     * @param size
-     * @return
      */
     public static Font getFont(int type, float size) {
         // 字体路径
@@ -43,9 +40,7 @@ public class FontUtil {
             Font sPfBoldFont = Font.createFont(Font.TRUETYPE_FONT, inputStream);
             sPfBoldFont = sPfBoldFont.deriveFont(size);
             return sPfBoldFont;
-        } catch (FontFormatException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        } catch (FontFormatException | IOException e) {
             e.printStackTrace();
         } finally {
             try {
