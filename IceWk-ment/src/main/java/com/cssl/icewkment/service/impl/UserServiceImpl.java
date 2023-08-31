@@ -5,7 +5,9 @@ import com.cssl.icewkment.entity.User;
 import com.cssl.icewkment.mapper.UserMapper;
 import com.cssl.icewkment.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
 
     @Autowired
