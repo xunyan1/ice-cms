@@ -22,20 +22,18 @@ public class ArticleComment implements Serializable {
     private String username;
     private String email;
 
-
     /**
      * 添加时间
      */
     @ApiModelProperty(value = "创建时间")
     @TableField(fill = FieldFill.INSERT)//创建注解::自动填充 -DEFAULT没有时，INSERT插入时
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
-    //@JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
-    //返回前端自动把Data类型转换为json类型
+//      @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
+// 返回前端自动把Data类型转换为json类型
     private Date addTime;
 
     private Integer parentId;
     private Integer foreignId;
     private String profile;
     private Integer articleId;
-
 }

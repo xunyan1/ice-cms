@@ -1,13 +1,9 @@
-package com.cssl.icewkment.Util;
+package com.cssl.icewkment.util;
 
 import java.awt.*;
 import java.io.IOException;
 import java.io.InputStream;
 
-/**
- * 字体工具类
- * Created by 刘彦民 on 2018/5/5.
- */
 public class FontUtil {
     /**
      * 默认字体

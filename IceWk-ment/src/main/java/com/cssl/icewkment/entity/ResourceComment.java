@@ -15,7 +15,6 @@ import java.util.Date;
 @Data
 @EqualsAndHashCode(callSuper = false)
 public class ResourceComment implements Serializable {
-
     private static final long serialVersionUID = 1L;
 
     /**
@@ -72,6 +71,4 @@ public class ResourceComment implements Serializable {
      * 用户id
      */
     private Integer userId;
-
-
 }

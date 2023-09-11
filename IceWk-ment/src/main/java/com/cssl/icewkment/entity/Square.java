@@ -1,9 +1,5 @@
 package com.cssl.icewkment.entity;
 
-import java.time.LocalDateTime;
-import java.io.Serializable;
-import java.util.Date;
-
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -13,11 +9,13 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
+import java.io.Serializable;
+import java.util.Date;
+
 @Data
 @EqualsAndHashCode(callSuper = false)
 public class Square implements Serializable {
-
-    private static final long serialVersionUID=1L;
+    private static final long serialVersionUID = 1L;
 
     /**
      * id
@@ -119,7 +117,7 @@ public class Square implements Serializable {
      */
     @ApiModelProperty(value = "创建时间")
     @TableField(fill = FieldFill.INSERT)//创建注解::自动填充 -DEFAULT没有时，INSERT插入时
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
 //      @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
 // 返回前端自动把Data类型转换为json类型
     private Date addTime;
@@ -129,21 +127,22 @@ public class Square implements Serializable {
      */
     @ApiModelProperty(value = "更新时间")
     @TableField(fill = FieldFill.INSERT_UPDATE)//更新注解::自动填充
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss",timezone="GMT+8")//返回前端自动把Data类型转换为json类型
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+//返回前端自动把Data类型转换为json类型
     private Date updateTime;
 
     /**
      * 生成时间
      */
     @ApiModelProperty(value = "生成时间")
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date createTime;
 
     /**
      * 最后评论时间
      */
     @ApiModelProperty(value = "最后评论时间")
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date lastPost;
 
     /**
@@ -180,5 +179,4 @@ public class Square implements Serializable {
      * 生成状态
      */
     private String status;
-
 }

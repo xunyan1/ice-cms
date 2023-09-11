@@ -1,4 +1,4 @@
-package com.cssl.icewkment.Util;
+package com.cssl.icewkment.util;
 
 import net.coobird.thumbnailator.Thumbnails;
 
@@ -9,9 +9,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-
 public class ImgGenerateUtils {
-
     //得到该字体字符串的长度
     public static int getWordWidth(Font font, String content) {
         FontMetrics fm = Toolkit.getDefaultToolkit().getFontMetrics(font);
@@ -21,12 +19,14 @@ public class ImgGenerateUtils {
         }
         return width;
     }
+
     /**
-     *  写文字
+     * 写文字
      */
     private File imgFiles;
     private static File outFiles;
-    public static File ImgGenerate(File imgFiles , String title , String content) {
+
+    public static File ImgGenerate(File imgFiles, String title, String content) {
         try {
             //文件先用 BufferedImage 对象为其截取1360x544的大小
             BufferedImage bufferedImage = Thumbnails.of(imgFiles).size(1360, 544).keepAspectRatio(false).asBufferedImage();
@@ -67,7 +67,7 @@ public class ImgGenerateUtils {
                 } else {
                     // 画 除了最后一行的前几行
                     String substring = subWords.substring(0, count);
-                    g.drawString(substring, (1360-width)/2, 215 + (b * height));
+                    g.drawString(substring, (1360 - width) / 2, 215 + (b * height));
                     subWords = subWords.substring(count);
                     b++;
                     width = 0;
@@ -75,7 +75,7 @@ public class ImgGenerateUtils {
                 }
                 // 画 最后一行字符串
                 if (i == total - 1) {
-                    g.drawString(subWords,  (1360-width)/2, 215 + (b * height));
+                    g.drawString(subWords, (1360 - width) / 2, 215 + (b * height));
                 }
 
             }
@@ -124,6 +124,4 @@ public class ImgGenerateUtils {
         }
         return null;
     }
-
-
 }
