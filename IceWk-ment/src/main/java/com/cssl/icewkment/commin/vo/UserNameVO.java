@@ -2,9 +2,7 @@ package com.cssl.icewkment.commin.vo;
 
 import lombok.Data;
 
-import java.io.Serializable;
-
 @Data
-public class UserNameVO implements Serializable {
+public class UserNameVO {
     private String username;
 }

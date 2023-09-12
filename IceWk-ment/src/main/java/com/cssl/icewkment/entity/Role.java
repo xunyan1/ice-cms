@@ -1,22 +1,24 @@
 package com.cssl.icewkment.entity;
 
-import com.baomidou.mybatisplus.annotation.TableField;
-import java.io.Serializable;
-import java.util.Date;
-
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+
+import java.io.Serializable;
 
 @Data
 @EqualsAndHashCode(callSuper = false)
 public class Role implements Serializable {
+    private static final long serialVersionUID = 1L;
 
-    private static final long serialVersionUID=1L;
-
+    /**
+     * id
+     */
     private Integer id;
 
+    /**
+     * 名称
+     */
     private String name;
 
     private String sort;
-
 }

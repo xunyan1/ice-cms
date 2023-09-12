@@ -2,26 +2,17 @@ package com.cssl.icewkment.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
-import java.io.Serializable;
-import java.util.Date;
-
 import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-/**
- * <p>
- * 
- * </p>
- *
- * @author admin
- * @since 2022-01-13
- */
-@Data
-  @EqualsAndHashCode(callSuper = false)
-    public class User implements Serializable {
+import java.io.Serializable;
+import java.util.Date;
 
-    private static final long serialVersionUID=1L;
+@Data
+@EqualsAndHashCode(callSuper = false)
+public class User implements Serializable {
+    private static final long serialVersionUID = 1L;
 
     @TableId(type = IdType.AUTO)
     private Integer userId;

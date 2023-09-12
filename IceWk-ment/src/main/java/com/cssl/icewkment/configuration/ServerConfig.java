@@ -9,14 +9,11 @@ import java.net.UnknownHostException;
 
 /**
  * <p>
- *  返回本机ip地址和端口
+ * 返回本机ip地址和端口
  * </p>
- *
- * @author admin
- * @since 2022-02-19
  */
 @Component
-public class ServerConfig  implements ApplicationListener<WebServerInitializedEvent> {
+public class ServerConfig implements ApplicationListener<WebServerInitializedEvent> {
     private Integer port;
 
     public String getUrl() {
@@ -26,12 +23,11 @@ public class ServerConfig  implements ApplicationListener<WebServerInitializedEv
         } catch (UnknownHostException e) {
             e.printStackTrace();
         }
-        return "http://"+address.getHostAddress() +":"+"8181";
+        return "http://" + address.getHostAddress() + ":" + "8181";
     }
 
     @Override
     public void onApplicationEvent(WebServerInitializedEvent webServerInitializedEvent) {
         this.port = webServerInitializedEvent.getWebServer().getPort();
     }
-
 }

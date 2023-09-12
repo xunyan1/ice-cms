@@ -1,7 +1,12 @@
 package com.cssl.icewkment.commin.vo;
 
-import java.util.Date;
 import lombok.Data;
+
+import java.util.Date;
+
+/**
+ * 文章列表
+ */
 
 @Data
 public class ArticleVO {

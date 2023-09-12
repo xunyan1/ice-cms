@@ -1,5 +1,7 @@
-package com.cssl.icewkment.Util;
+package com.cssl.icewkment.util;
 
+import com.cssl.icewkment.entity.Setting;
+import com.cssl.icewkment.mapper.SettingMapper;
 import com.qcloud.cos.COSClient;
 import com.qcloud.cos.ClientConfig;
 import com.qcloud.cos.auth.BasicCOSCredentials;
@@ -9,8 +11,6 @@ import com.qcloud.cos.exception.CosServiceException;
 import com.qcloud.cos.model.PutObjectRequest;
 import com.qcloud.cos.model.PutObjectResult;
 import com.qcloud.cos.region.Region;
-import com.cssl.icewkment.entity.Setting;
-import com.cssl.icewkment.mapper.SettingMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -24,7 +24,6 @@ import java.util.Random;
  */
 @Component
 public class TencentCOS {
-
     @Autowired
     private SettingMapper settingMapper;
 

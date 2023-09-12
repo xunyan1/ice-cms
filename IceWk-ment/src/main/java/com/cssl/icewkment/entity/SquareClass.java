@@ -10,7 +10,6 @@ import java.io.Serializable;
 @Data
 @EqualsAndHashCode(callSuper = false)
 public class SquareClass implements Serializable {
-
     @TableId(type = IdType.AUTO)
     private Integer id;
     private String  name;

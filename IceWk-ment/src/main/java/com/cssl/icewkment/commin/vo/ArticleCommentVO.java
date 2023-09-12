@@ -9,10 +9,13 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
+import java.io.Serializable;
 import java.util.Date;
+
 @Data
 @EqualsAndHashCode(callSuper = false)
-public class ArticleCommentVo {
+public class ArticleCommentVO implements Serializable {
+
     @TableId(type = IdType.AUTO)
     private Integer id;
     private Integer userId;

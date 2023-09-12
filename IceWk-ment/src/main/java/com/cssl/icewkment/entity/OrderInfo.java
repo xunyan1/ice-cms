@@ -8,7 +8,6 @@ import java.io.Serializable;
 @Data
 @TableName("t_order_info")
 public class OrderInfo implements Serializable {
-
     private String title;//订单标题
 
     private String orderNo;//商户订单编号
@@ -26,5 +25,4 @@ public class OrderInfo implements Serializable {
     private String orderStatus;//订单状态
 
     private Boolean alreadyDone;//完成性判断
-
 }

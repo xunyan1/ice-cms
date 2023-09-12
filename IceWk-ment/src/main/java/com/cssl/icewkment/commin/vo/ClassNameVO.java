@@ -3,6 +3,6 @@ package com.cssl.icewkment.commin.vo;
 import lombok.Data;
 
 @Data
-public class ClassNameVo {
+public class ClassNameVO {
     private String name;
 }
