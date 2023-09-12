@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
  * </p>
  *
  * @author admin
- * @since 2022-02-19
+ *
  */
 @Configuration
 public class PageConfiguration {

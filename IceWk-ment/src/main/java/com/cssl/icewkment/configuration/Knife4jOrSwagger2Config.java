@@ -18,7 +18,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * </p>
  *
  * @author admin
- * @since 2022-02-19
+ *
  */
 @EnableSwagger2
 @EnableKnife4j

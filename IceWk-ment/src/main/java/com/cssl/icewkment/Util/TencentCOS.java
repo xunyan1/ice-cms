@@ -1,4 +1,4 @@
-package com.cssl.icewkment.util;
+package com.cssl.icewkment.Util;
 
 import com.cssl.icewkment.entity.Setting;
 import com.cssl.icewkment.mapper.SettingMapper;

@@ -1,4 +1,4 @@
-package com.cssl.icewkment.util;
+package com.cssl.icewkment.Util;
 
 import net.coobird.thumbnailator.Thumbnails;
 

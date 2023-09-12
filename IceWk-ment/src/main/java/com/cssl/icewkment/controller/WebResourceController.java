@@ -27,7 +27,6 @@ import java.util.Map;
  * </p>
  *
  * @author admin
- * @since 2022-03-28
  */
 @io.swagger.annotations.Api(tags = "Web资源接口")
 @RestController

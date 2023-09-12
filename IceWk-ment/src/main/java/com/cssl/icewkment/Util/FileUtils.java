@@ -1,4 +1,4 @@
-package com.cssl.icewkment.util;
+package com.cssl.icewkment.Util;
 
 import com.cssl.icewkment.configuration.ApplicationConfig;
 import com.cssl.icewkment.configuration.ServerConfig;
