@@ -355,44 +355,44 @@ export const constantRoutes = [
       }
     ]
   },
-  {
-    path: '/StoreManage',
-    component: Layout,
-    redirect: '/Manage/StoreManage',
-    name: 'StoreManage',
-    meta: {
-      title: '商城管理',
-      icon: 'shopping',
-      requireAuth: true
-      // 需要登录才能进入的页面可以增加一个requireAuth属性
-    },
-    children: [
-      {
-        path: 'vipData',
-        component: () => import('@/admin/StoreUser'),
-        name: '商城总览',
-        meta: { title: '商城总览', icon: 'el-icon-s-marketing' }
-      },
-      {
-        path: 'vipUser',
-        component: () => import('@/admin/StoreUser'),
-        name: '会员管理',
-        meta: { title: '会员管理', icon: 'el-icon-star-off' }
-      },
-      {
-        path: 'OrderMent',
-        component: () => import('@/admin/OrderMent'),
-        name: '订单管理',
-        meta: { title: '订单管理', icon: 'el-icon-s-shop' }
-      },
-      {
-        path: 'PayMent',
-        component: () => import('@/admin/PayMent'),
-        name: '支付测试',
-        meta: { title: '支付测试', icon: 'el-icon-s-promotion' }
-      }
-    ]
-  },
+  // {
+  //   path: '/StoreManage',
+  //   component: Layout,
+  //   redirect: '/Manage/StoreManage',
+  //   name: 'StoreManage',
+  //   meta: {
+  //     title: '商城管理',
+  //     icon: 'shopping',
+  //     requireAuth: true
+  //     // 需要登录才能进入的页面可以增加一个requireAuth属性
+  //   },
+  //   children: [
+  //     {
+  //       path: 'vipData',
+  //       component: () => import('@/admin/StoreUser'),
+  //       name: '商城总览',
+  //       meta: { title: '商城总览', icon: 'el-icon-s-marketing' }
+  //     },
+  //     {
+  //       path: 'vipUser',
+  //       component: () => import('@/admin/StoreUser'),
+  //       name: '会员管理',
+  //       meta: { title: '会员管理', icon: 'el-icon-star-off' }
+  //     },
+  //     {
+  //       path: 'OrderMent',
+  //       component: () => import('@/admin/OrderMent'),
+  //       name: '订单管理',
+  //       meta: { title: '订单管理', icon: 'el-icon-s-shop' }
+  //     },
+  //     {
+  //       path: 'PayMent',
+  //       component: () => import('@/admin/PayMent'),
+  //       name: '支付测试',
+  //       meta: { title: '支付测试', icon: 'el-icon-s-promotion' }
+  //     }
+  //   ]
+  // },
   {
     path: '/sitting',
     component: Layout,
