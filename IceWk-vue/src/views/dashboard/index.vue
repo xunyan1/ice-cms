@@ -19,8 +19,9 @@
         <div class="box">
           <span></span>
           <div class="content">
-            <h2>当前版本 v2.0.1 <el-button style="margin-top: 40px;" type="primary" round>查看官网</el-button>
-            </h2>
+            <h2>冰淇淋CMS</h2>
+              <!-- <el-button style="margin-top: 40px;" type="primary" round>查看官网</el-button> -->
+           
           </div>
         </div>
       </el-col>

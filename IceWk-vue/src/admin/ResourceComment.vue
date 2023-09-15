@@ -10,14 +10,14 @@
       style="width: 100%"
     >
 
-      <el-table-column align="center" prop="date" label="ID" width="80">
+      <el-table-column align="center" prop="date" label="ID" width="100">
         <template slot-scope="scope">
           <span>{{ scope.row.id }}</span>
         </template>
       </el-table-column>
           
       
-            <el-table-column align="center" prop="date" label="ID" width="80">
+            <el-table-column align="center" prop="date" label="ID" width="100">
         <template slot-scope="scope">
           <span>{{ scope.row.userId }}</span>
         </template>
@@ -25,19 +25,19 @@
       
 
 
-      <el-table-column width="105px" align="center" label="创建时间">
+      <el-table-column width="150px" align="center" label="创建时间">
         <template slot-scope="scope">
           <span v-text="formatDate(scope.row.addTime)"></span>
         </template>
       </el-table-column>
 
-      <el-table-column width="80px" align="center" label="用户名">
+      <el-table-column width="100px" align="center" label="用户名">
         <template slot-scope="scope">
           <span>{{ scope.row.username }}</span>
         </template>
       </el-table-column>
       
-         <el-table-column align="center" prop="date" label="内容" width="80">
+         <el-table-column align="center" prop="date" label="内容" width="500">
         <template slot-scope="scope">
           <span>{{ scope.row.content }}</span>
         </template>
