@@ -10,19 +10,19 @@
         style="width: 100%"
       >
   
-        <el-table-column align="center" prop="date" label="ID" width="80">
+        <el-table-column align="center" prop="date" label="ID" width="100">
           <template slot-scope="scope">
             <span>{{ scope.row.userId }}</span>
           </template>
         </el-table-column>
   
-        <el-table-column width="105px" align="center" label="最近登陆时间">
+        <el-table-column width="170px" align="center" label="最近登陆时间">
           <template slot-scope="scope">
             <span v-text="formatDate(scope.row.lastLogin)"></span>
           </template>
         </el-table-column>
   
-        <el-table-column width="80px" align="center" label="名称">
+        <el-table-column width="140px" align="center" label="名称">
           <template slot-scope="scope">
             <span>{{ scope.row.name }}</span>
           </template>
@@ -36,7 +36,7 @@
           </template>
         </el-table-column> -->
   
-        <el-table-column width="220px" min-width="140px" label="简介">
+        <el-table-column width="500px" min-width="140px" label="简介" align="center">
           <template slot-scope="{ row }">
             <router-link target="_blank"  :to="'/post/' + row.id" class="link-type">
               <span>{{ row.intro }}</span>
@@ -44,7 +44,7 @@
           </template>
         </el-table-column>
   
-        <el-table-column align="center" label="操作" width="200">
+        <el-table-column align="center" label="操作" width="240">
           <template slot-scope="scope">
            
               <el-button @click="changescore(scope.row.id)" type="primary" size="mini" icon="el-icon-edit">
